@@ -1,10 +1,10 @@
 import { onBeforeUnmount, onMounted, ref, watch } from "vue";
 
-const theme = ref("system");
-const themes = ["light", "dark"];
-const matcher = window.matchMedia("(prefers-color-scheme: dark)");
-
 export function useThemes() {
+  const theme = ref("system");
+  const themes = ["light", "dark"];
+  const matcher = window.matchMedia("(prefers-color-scheme: dark)");
+
   const listener = () => {
     if (theme.value === "system") {
       applySystemTheme();
