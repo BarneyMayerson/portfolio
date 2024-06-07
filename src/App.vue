@@ -1,7 +1,7 @@
 <script setup>
-import { useRoute } from "vue-router";
-import NavigationMenu from "@/components/Generic/NavigationMenu.vue";
 import { computed } from "vue";
+import { useRoute } from "vue-router";
+import NavigationMenu from "@/Components/Generic/NavigationMenu.vue";
 
 const route = useRoute();
 const currentRouteName = computed(() => route.name);
