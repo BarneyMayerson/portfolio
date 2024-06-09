@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import Settings from "@/Components/Generic/Settings.vue";
+import SettingsButton from "@/Components/Generic/SettingsButton.vue";
 import { useThemes } from "@/Composables/useThemes";
 
 const { theme } = useThemes(); // needs to init the theme was saved in the local storage
@@ -21,15 +22,13 @@ const displaySettings = ref(false);
   <div class="text-gray-900 bg-gray-100 dark:text-gray-100 dark:bg-gray-800">
     <div class="container mx-auto px-4 lg:px-8 pt-6 min-h-full">
       <h1 class="text-3xl font-bold">Here is the Home page</h1>
-      <div class="mt-6 float-right">
-        <button
-          class="px-3 py-1 rounded-lg border border-blue-500 bg-blue-600 text-white"
-          @click="displaySettings = !displaySettings"
-        >
-          Open Settings
-        </button>
-      </div>
     </div>
+  </div>
+
+  <div
+    class="bg-blue-500 rounded-r-md text-white py-2 pl-1 pr-2 fixed left-0 top-[50%] flex items-center justify-center z-10"
+  >
+    <SettingsButton @show="displaySettings = true" />
   </div>
 </template>
 
