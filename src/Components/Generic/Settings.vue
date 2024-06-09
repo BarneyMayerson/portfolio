@@ -9,7 +9,7 @@ defineEmits(["hide"]);
     <!-- Header -->
     <div class="flex flex-wrap px-3 py-2">
       <div class="w-2/3">
-        <h2 class="text-xl">Theme Settings</h2>
+        <h2 class="text-xl ml-1">Theme Settings</h2>
       </div>
       <div class="w-1/3">
         <button class="w-5 h-5 float-right" @click="$emit('hide')">
@@ -32,7 +32,7 @@ defineEmits(["hide"]);
 
     <!-- Themes Dropdown -->
     <div class="px-3 py-2">
-      <h3 class="text-lg">Theme Mode</h3>
+      <h3 class="text-lg ml-2 mb-1">Theme Mode</h3>
       <ThemesDropdown />
     </div>
   </div>

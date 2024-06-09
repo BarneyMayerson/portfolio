@@ -7,7 +7,7 @@ const { theme } = useThemes();
 <template>
   <select
     v-model="theme"
-    class="block w-full rounded px-2 py-2 border-r-8 border-transparent leading-tight bg-white dark:bg-gray-700"
+    class="block w-full rounded px-2 py-2 border-r-8 border-transparent leading-tight bg-white dark:bg-gray-600"
   >
     <option value="system">System</option>
     <option value="light">Light</option>
