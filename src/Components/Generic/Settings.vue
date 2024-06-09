@@ -1,5 +1,6 @@
 <script setup>
 import ThemesDropdown from "@/Components/Generic/ThemesDropdown.vue";
+import ColorButton from "@/Components/Generic/ColorButton.vue";
 
 defineEmits(["hide"]);
 </script>
@@ -34,6 +35,58 @@ defineEmits(["hide"]);
     <div class="px-3 py-2">
       <h3 class="text-lg ml-2 mb-1">Theme Mode</h3>
       <ThemesDropdown />
+    </div>
+
+    <!-- Theme Color -->
+    <div class="px-3 py-2">
+      <h3 class="text-lg ml-2 mb-1">Theme Color</h3>
+      <div class="flex flex-wrap w-full">
+        <div class="w-1/5 p-1">
+          <ColorButton color="blue" />
+        </div>
+        <div class="w-1/5 p-1">
+          <ColorButton color="teal" />
+        </div>
+        <div class="w-1/5 p-1">
+          <ColorButton color="purple" />
+        </div>
+        <div class="w-1/5 p-1">
+          <ColorButton color="green" />
+        </div>
+        <div class="w-1/5 p-1">
+          <ColorButton color="red" />
+        </div>
+        <div class="w-1/5 p-1">
+          <ColorButton color="orange" />
+        </div>
+        <div class="w-1/5 p-1">
+          <ColorButton color="yellow" />
+        </div>
+        <div class="w-1/5 p-1">
+          <ColorButton color="indigo" />
+        </div>
+        <div class="w-1/5 p-1">
+          <ColorButton color="pink" />
+        </div>
+        <div class="w-1/5 p-1">
+          <ColorButton color="lime" />
+        </div>
+        <div class="w-1/5 p-1">
+          <ColorButton color="sky" />
+        </div>
+        <div class="w-1/5 p-1">
+          <ColorButton color="emerald" />
+        </div>
+        <div class="w-1/5 p-1">
+          <ColorButton color="stone" />
+        </div>
+        <div class="w-1/5 p-1">
+          <ColorButton color="zinc" />
+        </div>
+        <div class="w-1/5 p-1">
+          <ColorButton color="slate" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
