@@ -3,8 +3,6 @@ import ThemesDropdown from "@/Components/Generic/ThemesDropdown.vue";
 import ColorButton from "@/Components/Generic/ColorButton.vue";
 import { useColorSchemes } from "@/Composables/useColorSchemes";
 
-defineEmits(["hide"]);
-
 const { colorScheme } = useColorSchemes();
 </script>
 
@@ -18,7 +16,6 @@ const { colorScheme } = useColorSchemes();
       <div class="w-1/3">
         <button class="w-5 h-5 float-right" @click="$emit('hide')">
           <svg
-            height="24"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"

@@ -1,7 +1,3 @@
-<script setup>
-defineEmits("show");
-</script>
-
 <template>
   <button class="h-6 w-6" @click="$emit('show')">
     <svg
