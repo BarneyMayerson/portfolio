@@ -1,8 +1,11 @@
 <script setup>
 import ThemesDropdown from "@/Components/Generic/ThemesDropdown.vue";
 import ColorButton from "@/Components/Generic/ColorButton.vue";
+import { useColorSchemes } from "@/Composables/useColorSchemes";
 
 defineEmits(["hide"]);
+
+const { colorScheme } = useColorSchemes();
 </script>
 
 <template>
@@ -39,52 +42,52 @@ defineEmits(["hide"]);
 
     <!-- Theme Color -->
     <div class="px-3 py-2">
-      <h3 class="text-lg ml-2 mb-1">Theme Color</h3>
+      <h3 class="text-lg ml-2 mb-1">Color Scheme</h3>
       <div class="flex flex-wrap w-full">
         <div class="w-1/5 p-1">
-          <ColorButton color="blue" />
+          <ColorButton color="blue" @click="colorScheme = 'blue'" />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="teal" />
+          <ColorButton color="teal" @click="colorScheme = 'teal'" />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="purple" />
+          <ColorButton color="purple" @click="colorScheme = 'purple'" />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="green" />
+          <ColorButton color="green" @click="colorScheme = 'green'" />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="red" />
+          <ColorButton color="red" @click="colorScheme = 'red'" />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="orange" />
+          <ColorButton color="orange" @click="colorScheme = 'orange'" />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="yellow" />
+          <ColorButton color="yellow" @click="colorScheme = 'yellow'" />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="indigo" />
+          <ColorButton color="indigo" @click="colorScheme = 'indigo'" />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="pink" />
+          <ColorButton color="pink" @click="colorScheme = 'pink'" />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="lime" />
+          <ColorButton color="lime" @click="colorScheme = 'lime'" />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="sky" />
+          <ColorButton color="sky" @click="colorScheme = 'sky'" />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="emerald" />
+          <ColorButton color="emerald" @click="colorScheme = 'emerald'" />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="stone" />
+          <ColorButton color="stone" @click="colorScheme = 'stone'" />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="zinc" />
+          <ColorButton color="zinc" @click="colorScheme = 'zinc'" />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="slate" />
+          <ColorButton color="slate" @click="colorScheme = 'slate'" />
         </div>
       </div>
     </div>
