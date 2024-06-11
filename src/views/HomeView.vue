@@ -1,12 +1,16 @@
 <script setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import Settings from "@/Components/Generic/Settings.vue";
 import SettingsButton from "@/Components/Generic/SettingsButton.vue";
 import { useThemes } from "@/Composables/useThemes";
+import { useColorSchemeStore } from "@/stores/colorScheme";
 
 const { theme } = useThemes(); // needs to init the theme was saved in the local storage
 
 const displaySettings = ref(false);
+
+const colorScheme = useColorSchemeStore();
+const primaryBgColorClass = computed(() => colorScheme.primaryBgColorClass);
 </script>
 
 <template>
@@ -26,7 +30,8 @@ const displaySettings = ref(false);
   </div>
 
   <div
-    class="bg-blue-500 rounded-r-md text-white py-2 pl-1 pr-2 fixed left-0 top-[50%] flex items-center justify-center z-10"
+    class="rounded-r-md text-white py-2 pl-1 pr-2 fixed right-0 top-[50%] flex items-center justify-center z-10"
+    :class="primaryBgColorClass"
   >
     <SettingsButton @show="displaySettings = true" />
   </div>
