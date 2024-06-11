@@ -17,7 +17,7 @@ const primaryBgColorClass = computed(() => colorScheme.primaryBgColorClass);
   <Transition name="slide">
     <div
       v-if="displaySettings"
-      class="fixed left-0 min-h-full text-gray-900 bg-gray-100 dark:text-gray-100 dark:bg-gray-700 w-full border-r border-t border-red-500 top-16 z-20 lg:w-1/4"
+      class="fixed left-0 min-h-full text-gray-900 bg-gray-100 dark:text-gray-100 dark:bg-gray-700 w-full border-r border-t border-red-500 top-16 z-20 sm:w-1/2 md:w-1/3 lg:w-1/4"
     >
       <Settings @hide="displaySettings = false" />
     </div>

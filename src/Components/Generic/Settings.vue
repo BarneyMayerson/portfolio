@@ -1,9 +1,11 @@
 <script setup>
+import { computed } from "vue";
+import { useColorSchemeStore } from "@/stores/colorScheme";
 import ThemesDropdown from "@/Components/Generic/ThemesDropdown.vue";
 import ColorButton from "@/Components/Generic/ColorButton.vue";
-import { useColorSchemeStore } from "@/stores/colorScheme";
 
-const { setColor } = useColorSchemeStore();
+const colorScheme = useColorSchemeStore();
+const primaryColor = computed(() => colorScheme.primaryColor);
 </script>
 
 <template>
@@ -37,57 +39,115 @@ const { setColor } = useColorSchemeStore();
       <ThemesDropdown />
     </div>
 
-    <!-- Theme Color -->
+    <!-- Color Schema -->
     <div class="px-3 py-2">
       <h3 class="text-lg ml-2 mb-1">Color Scheme</h3>
       <div class="flex flex-wrap w-full">
         <div class="w-1/5 p-1">
-          <ColorButton color="purple" @click="setColor('purple')" />
+          <ColorButton
+            color="purple"
+            @click="colorScheme.setColor('purple')"
+            :active="primaryColor === 'purple'"
+          />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="indigo" @click="setColor('indigo')" />
+          <ColorButton
+            color="indigo"
+            @click="colorScheme.setColor('indigo')"
+            :active="primaryColor === 'indigo'"
+          />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="blue" @click="setColor('blue')" />
+          <ColorButton
+            color="blue"
+            @click="colorScheme.setColor('blue')"
+            :active="primaryColor === 'blue'"
+          />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="sky" @click="setColor('sky')" />
+          <ColorButton
+            color="sky"
+            @click="colorScheme.setColor('sky')"
+            :active="primaryColor === 'sky'"
+          />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="teal" @click="setColor('teal')" />
+          <ColorButton
+            color="teal"
+            @click="colorScheme.setColor('teal')"
+            :active="primaryColor === 'teal'"
+          />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="emerald" @click="setColor('emerald')" />
+          <ColorButton
+            color="emerald"
+            @click="colorScheme.setColor('emerald')"
+            :active="primaryColor === 'emerald'"
+          />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="green" @click="setColor('green')" />
+          <ColorButton
+            color="green"
+            @click="colorScheme.setColor('green')"
+            :active="primaryColor === 'green'"
+          />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="lime" @click="setColor('lime')" />
+          <ColorButton
+            color="lime"
+            @click="colorScheme.setColor('lime')"
+            :active="primaryColor === 'lime'"
+          />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="yellow" @click="setColor('yellow')" />
+          <ColorButton
+            color="yellow"
+            @click="colorScheme.setColor('yellow')"
+            :active="primaryColor === 'yellow'"
+          />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="orange" @click="setColor('orange')" />
+          <ColorButton
+            color="orange"
+            @click="colorScheme.setColor('orange')"
+            :active="primaryColor === 'orange'"
+          />
         </div>
 
         <div class="w-1/5 p-1">
-          <ColorButton color="red" @click="setColor('red')" />
-        </div>
-
-        <div class="w-1/5 p-1">
-          <ColorButton color="pink" @click="setColor('pink')" />
-        </div>
-
-        <div class="w-1/5 p-1">
-          <ColorButton color="stone" @click="setColor('stone')" />
+          <ColorButton
+            color="red"
+            @click="colorScheme.setColor('red')"
+            :active="primaryColor === 'red'"
+          />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="zinc" @click="setColor('zinc')" />
+          <ColorButton
+            color="pink"
+            @click="colorScheme.setColor('pink')"
+            :active="primaryColor === 'pink'"
+          />
         </div>
         <div class="w-1/5 p-1">
-          <ColorButton color="slate" @click="setColor('slate')" />
+          <ColorButton
+            color="stone"
+            @click="colorScheme.setColor('stone')"
+            :active="primaryColor === 'stone'"
+          />
+        </div>
+        <div class="w-1/5 p-1">
+          <ColorButton
+            color="zinc"
+            @click="colorScheme.setColor('zinc')"
+            :active="primaryColor === 'zinc'"
+          />
+        </div>
+        <div class="w-1/5 p-1">
+          <ColorButton
+            color="slate"
+            @click="colorScheme.setColor('slate')"
+            :active="primaryColor === 'slate'"
+          />
         </div>
       </div>
     </div>
