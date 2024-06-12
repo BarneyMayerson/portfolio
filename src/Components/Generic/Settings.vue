@@ -7,6 +7,7 @@ import RangeInput from "@/Components/Inputs/RangeInput.vue";
 
 const colorScheme = useColorSchemeStore();
 const primaryColor = computed(() => colorScheme.primaryColor);
+const primaryShade = computed(() => colorScheme.primaryShade);
 </script>
 
 <template>
@@ -157,7 +158,7 @@ const primaryColor = computed(() => colorScheme.primaryColor);
     <div class="p-3">
       <h3 class="text-lg ml-2 mb-1">Color Scheme Shade</h3>
       <div class="w-full">
-        <RangeInput :color="primaryColor" />
+        <RangeInput :color="primaryColor" :shade="primaryShade" />
       </div>
     </div>
   </div>

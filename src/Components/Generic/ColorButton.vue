@@ -7,6 +7,10 @@ const props = defineProps({
     type: String,
     default: "blue",
   },
+  shade: {
+    type: Number,
+    default: 500,
+  },
   active: {
     type: Boolean,
     default: false,
@@ -24,6 +28,6 @@ const outliningClasses = computed(() =>
 
 <template>
   <button
-    :class="`${bgColorClasses[color]} p-5 rounded outline-offset-2 ${outliningClasses}`"
+    :class="`${bgColorClasses[color][500]} p-5 rounded outline-offset-2 ${outliningClasses}`"
   ></button>
 </template>
