@@ -20,19 +20,52 @@ export const useColorSchemeStore = defineStore("colorSchemeStore", () => {
     "slate",
   ];
 
+  const shades = [
+    "100",
+    "200",
+    "300",
+    "400",
+    "500",
+    "600",
+    "700",
+    "800",
+    "900",
+  ];
+
   const primaryColor = ref(null);
+  const primaryShade = ref(null);
 
   primaryColor.value = colorSchemes.includes(localStorage.colorScheme)
     ? localStorage.colorScheme
     : "blue";
 
-  const primaryColorClass = computed(() => `text-${primaryColor.value}-500`);
-  const primaryBgColorClass = computed(() => `bg-${primaryColor.value}-500`);
+  primaryShade.value = shades.includes(localStorage.shade)
+    ? localStorage.shade
+    : "500";
+
+  const primaryColorClass = computed(
+    () => `text-${primaryColor.value}-${primaryShade.value}`
+  );
+  const primaryBgColorClass = computed(
+    () => `bg-${primaryColor.value}-${primaryShade.value}`
+  );
 
   function setColor(color) {
     primaryColor.value = color;
     localStorage.colorScheme = color;
   }
 
-  return { primaryColor, primaryColorClass, primaryBgColorClass, setColor };
+  function setShade(shade) {
+    primaryShade.value = shade;
+    localStorage.shade = shade;
+  }
+
+  return {
+    primaryColor,
+    primaryShade,
+    primaryColorClass,
+    primaryBgColorClass,
+    setColor,
+    setShade,
+  };
 });
