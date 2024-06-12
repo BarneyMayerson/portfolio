@@ -3,6 +3,7 @@ import { computed } from "vue";
 import { useColorSchemeStore } from "@/stores/colorScheme";
 import ThemesDropdown from "@/Components/Generic/ThemesDropdown.vue";
 import ColorButton from "@/Components/Generic/ColorButton.vue";
+import RangeInput from "@/Components/Inputs/RangeInput.vue";
 
 const colorScheme = useColorSchemeStore();
 const primaryColor = computed(() => colorScheme.primaryColor);
@@ -34,13 +35,13 @@ const primaryColor = computed(() => colorScheme.primaryColor);
     </div>
 
     <!-- Themes Dropdown -->
-    <div class="px-3 py-2">
+    <div class="p-3">
       <h3 class="text-lg ml-2 mb-1">Theme Mode</h3>
       <ThemesDropdown />
     </div>
 
     <!-- Color Schema -->
-    <div class="px-3 py-2">
+    <div class="p-3">
       <h3 class="text-lg ml-2 mb-1">Color Scheme</h3>
       <div class="flex flex-wrap w-full">
         <div class="w-1/5 p-1">
@@ -149,6 +150,14 @@ const primaryColor = computed(() => colorScheme.primaryColor);
             :active="primaryColor === 'slate'"
           />
         </div>
+      </div>
+    </div>
+
+    <!-- Color Schema Shade -->
+    <div class="p-3">
+      <h3 class="text-lg ml-2 mb-1">Color Scheme Shade</h3>
+      <div class="w-full">
+        <RangeInput :color="primaryColor" />
       </div>
     </div>
   </div>
