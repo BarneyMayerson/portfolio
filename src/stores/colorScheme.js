@@ -43,13 +43,6 @@ export const useColorSchemeStore = defineStore("colorSchemeStore", () => {
     ? localStorage.shade
     : "500";
 
-  const primaryColorClass = computed(
-    () => `text-${primaryColor.value}-${primaryShade.value}`
-  );
-  const primaryBgColorClass = computed(
-    () => `bg-${primaryColor.value}-${primaryShade.value}`
-  );
-
   function setColor(color) {
     primaryColor.value = color;
     localStorage.colorScheme = color;
@@ -63,8 +56,6 @@ export const useColorSchemeStore = defineStore("colorSchemeStore", () => {
   return {
     primaryColor,
     primaryShade,
-    primaryColorClass,
-    primaryBgColorClass,
     setColor,
     setShade,
   };

@@ -4,13 +4,18 @@ import Settings from "@/Components/Generic/Settings.vue";
 import SettingsButton from "@/Components/Generic/SettingsButton.vue";
 import { useThemes } from "@/Composables/useThemes";
 import { useColorSchemeStore } from "@/stores/colorScheme";
+import { useColorSchemes } from "@/Composables/useColorSchemes";
 
 const { theme } = useThemes(); // needs to init the theme was saved in the local storage
 
 const displaySettings = ref(false);
 
+const { bgColorClasses } = useColorSchemes();
+
 const colorScheme = useColorSchemeStore();
-const primaryBgColorClass = computed(() => colorScheme.primaryBgColorClass);
+const primaryBgColorClass = computed(
+  () => bgColorClasses[colorScheme.primaryColor][colorScheme.primaryShade]
+);
 </script>
 
 <template>
