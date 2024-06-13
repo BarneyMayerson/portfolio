@@ -1,4 +1,5 @@
 import { onMounted, ref, watch } from "vue";
+import { useColorSchemeStore } from "@/stores/colorScheme";
 
 const bgColorClasses = {
   blue: {
@@ -190,43 +191,15 @@ export function useColorSchemes() {
   const colorScheme = ref("blue");
   const colorShade = ref("500");
 
-  const colorSchemes = [
-    "blue",
-    "teal",
-    "purple",
-    "green",
-    "red",
-    "orange",
-    "yellow",
-    "indigo",
-    "pink",
-    "lime",
-    "sky",
-    "emerald",
-    "stone",
-    "zinc",
-    "slate",
-  ];
-
-  const colorShades = [
-    "100",
-    "200",
-    "300",
-    "400",
-    "500",
-    "600",
-    "700",
-    "800",
-    "900",
-  ];
-
   onMounted(() => {
-    if (colorSchemes.includes(localStorage.colorScheme)) {
+    const { colors, shades } = useColorSchemeStore();
+
+    if (colors.includes(localStorage.colorScheme)) {
       colorScheme.value = localStorage.colorScheme;
     }
 
-    if (colorShades.includes(localStorage.colorShade)) {
-      colorShade.value = localStorage.colorShade;
+    if (shades.includes(localStorage.colorShade)) {
+      colorShade.value = localStorage.shade;
     }
   });
 
@@ -235,7 +208,7 @@ export function useColorSchemes() {
   });
 
   watch(colorShade, (shadeValue) => {
-    localStorage.colorShade = shadeValue;
+    localStorage.shade = shadeValue;
   });
 
   return { bgColorClasses, colorScheme, colorShade };
