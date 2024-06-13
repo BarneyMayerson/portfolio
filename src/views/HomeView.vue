@@ -35,7 +35,7 @@ const primaryBgColorClass = computed(
   </div>
 
   <div
-    class="rounded-r-md text-white py-2 pl-1 pr-2 fixed right-0 top-[50%] flex items-center justify-center z-10"
+    class="rounded-r-md text-white py-2 pl-1 pr-2 fixed left-0 top-[50%] flex items-center justify-center z-10"
     :class="primaryBgColorClass"
   >
     <SettingsButton @show="displaySettings = true" />
