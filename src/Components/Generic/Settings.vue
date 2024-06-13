@@ -11,7 +11,7 @@ const primaryShade = computed(() => colorScheme.primaryShade);
 </script>
 
 <template>
-  <div class="divide-y divide-red-500">
+  <div class="divide-y dark:divide-gray-500">
     <!-- Header -->
     <div class="flex flex-wrap px-3 py-2">
       <div class="w-2/3">
