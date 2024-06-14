@@ -27,7 +27,7 @@ const close = () => {
 
 <template>
   <nav
-    class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700"
+    class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 z-10"
   >
     <div class="container mx-auto px-4 lg:px-8">
       <div class="h-16 flex items-center justify-between">
