@@ -1,10 +1,12 @@
 <script setup>
-import { computed, ref } from "vue";
+import { computed, ref, watch } from "vue";
 import Settings from "@/Components/Generic/Settings.vue";
 import SettingsButton from "@/Components/Generic/SettingsButton.vue";
+import colors from "tailwindcss/colors";
 import { useThemes } from "@/Composables/useThemes";
 import { useColorSchemeStore } from "@/stores/colorScheme";
 import { useColorSchemes } from "@/Composables/useColorSchemes";
+import LinkParticles from "@/Components/Generic/LinkParticles.vue";
 
 const { theme } = useThemes(); // needs to init the theme was saved in the local storage
 
@@ -19,6 +21,16 @@ const primaryBgColorClass = computed(
 const primaryColorClass = computed(
   () => textColorClasses[colorScheme.primaryColor][colorScheme.primaryShade]
 );
+
+const primaryColor = computed(
+  () => colors[colorScheme.primaryColor][colorScheme.primaryShade]
+);
+
+// track the primaryColor
+const renderKey = ref(0);
+watch(primaryColor, () => {
+  renderKey.value++;
+});
 </script>
 
 <template>
@@ -35,6 +47,7 @@ const primaryColorClass = computed(
     class="bg-gray-100 dark:bg-gray-800 min-h-screen"
     :class="primaryColorClass"
   >
+    <LinkParticles class="h-screen" :primaryColor :key="renderKey" />
     <div class="container mx-auto px-4 lg:px-8 pt-6">
       <h1 class="text-3xl font-bold">Here is the Home page</h1>
     </div>

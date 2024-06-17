@@ -1,4 +1,11 @@
 <script setup>
+const props = defineProps({
+  primaryColor: {
+    type: String,
+    default: "#3b82f6",
+  },
+});
+
 const options = {
   detectRetina: true,
   fpsLimit: 120,
@@ -6,35 +13,30 @@ const options = {
     enable: false,
     zIndex: 0,
   },
-  background: {
-    color: {
-      value: "#0d47a1",
-    },
-  },
   particles: {
     color: {
-      value: "#ffffff",
+      value: props.primaryColor,
     },
     links: {
-      color: "#ffffff",
+      color: props.primaryColor,
       distance: 150,
       enable: true,
       opacity: 0.5,
-      width: 12,
+      width: 2,
     },
     move: {
-      direction: "outside",
+      direction: "none",
       enable: true,
       outModes: "bounce",
-      // random: true,
-      speed: 6,
+      random: true,
+      speed: 8,
       // straight: false
     },
     number: {
       density: {
         enable: true,
       },
-      value: 120,
+      value: 160,
     },
     opacity: {
       value: 0.5,
@@ -44,8 +46,8 @@ const options = {
     },
     size: {
       value: {
-        max: 15,
-        min: 5,
+        max: 6,
+        min: 2,
       },
     },
   },
@@ -66,5 +68,5 @@ const options = {
 </script>
 
 <template>
-  <vue-particles :options id="particles" />
+  <vue-particles id="particles" :options />
 </template>

@@ -1,21 +1,8 @@
 <script setup>
-import { computed } from "vue";
 import { useThemes } from "@/Composables/useThemes";
-import { useColorSchemeStore } from "@/stores/colorScheme";
-import { useColorSchemes } from "@/Composables/useColorSchemes";
 import LinkParticles from "@/Components/Generic/LinkParticles.vue";
 
 const { theme } = useThemes(); // needs to init the theme was saved in the local storage
-
-const { bgColorClasses, textColorClasses } = useColorSchemes();
-
-const colorScheme = useColorSchemeStore();
-const primaryBgColorClass = computed(
-  () => bgColorClasses[colorScheme.primaryColor][colorScheme.primaryShade]
-);
-const primaryColorClass = computed(
-  () => textColorClasses[colorScheme.primaryColor][colorScheme.primaryShade]
-);
 </script>
 <template>
   <div class="relative min-h-screen">
