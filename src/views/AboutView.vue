@@ -1,20 +1,24 @@
 <script setup>
+import { computed } from "vue";
 import { useThemes } from "@/Composables/useThemes";
-import LinkParticles from "@/Components/Generic/LinkParticles.vue";
+import { useColorSchemeStore } from "@/stores/colorScheme";
+import { useColorSchemes } from "@/Composables/useColorSchemes";
 
 const { theme } = useThemes(); // needs to init the theme was saved in the local storage
+
+const { textColorClasses } = useColorSchemes();
+const colorScheme = useColorSchemeStore();
+const primaryColorClass = computed(
+  () => textColorClasses[colorScheme.primaryColor][colorScheme.primaryShade]
+);
 </script>
 <template>
-  <div class="relative min-h-screen">
-    <LinkParticles class="h-screen" />
-    <div class="absolute left-1/4 lg:left-1/3 top-1/3 w-1/2 lg:w-1/3">
-      <div
-        class="bg-black/40 w-full md:mx-0 md:p-8 rounded border p-4 text-center text-white border-red-500"
-      >
-        <h1 class="text-2xl sm:text-3xl md:text-4xl">Barney Mayerson</h1>
-        <h2 class="sm:text-1xl text-lg md:text-2xl">Web App Developer</h2>
-        <p class="md:text-1xl sm:text-1xl">From Polotsk</p>
-      </div>
+  <div
+    class="bg-gray-100 dark:bg-gray-800 min-h-screen"
+    :class="primaryColorClass"
+  >
+    <div class="container mx-auto px-4 lg:px-8 pt-6">
+      <h2 class="sm:text-1xl text-lg md:text-2xl">Here is about page</h2>
     </div>
   </div>
 </template>

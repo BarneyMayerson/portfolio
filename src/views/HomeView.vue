@@ -48,6 +48,15 @@ watch(primaryColor, () => {
     :class="primaryColorClass"
   >
     <LinkParticles class="h-screen" :primaryColor :key="renderKey" />
+    <div class="absolute left-1/4 lg:left-1/3 top-1/3 w-1/2 lg:w-1/3">
+      <div
+        class="bg-black/40 w-full md:mx-0 md:p-8 rounded border p-4 text-center text-white border-red-500"
+      >
+        <h1 class="text-2xl sm:text-3xl md:text-4xl">Barney Mayerson</h1>
+        <h2 class="sm:text-1xl text-lg md:text-2xl">Web App Developer</h2>
+        <p class="md:text-1xl sm:text-1xl">From Polotsk</p>
+      </div>
+    </div>
     <div class="container mx-auto px-4 lg:px-8 pt-6">
       <h1 class="text-3xl font-bold">Here is the Home page</h1>
     </div>

@@ -48,7 +48,7 @@ const close = () => {
               class="text-xl font-semibold tracking-tight"
               :class="primaryColorClass"
             >
-              James
+              Barney Mayerson
             </span>
           </div>
           <!-- Navigation Links -->
