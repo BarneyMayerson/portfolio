@@ -6,6 +6,7 @@ import { useColorSchemes } from "@/Composables/useColorSchemes";
 
 defineProps({
   currentRouteName: String,
+  currentRouteHash: String,
 });
 
 const colorScheme = useColorSchemeStore();
@@ -13,16 +14,6 @@ const { textColorClasses } = useColorSchemes();
 const primaryColorClass = computed(
   () => textColorClasses[colorScheme.primaryColor][colorScheme.primaryShade]
 );
-
-const open = ref(false);
-
-const toggle = () => {
-  open.value = !open.value;
-};
-
-const close = () => {
-  open.value = false;
-};
 </script>
 
 <template>
@@ -53,12 +44,28 @@ const close = () => {
           </div>
           <!-- Navigation Links -->
           <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-            <NavLink to="/" :active="currentRouteName === 'home'">
+            <NavLink
+              :to="{ name: 'home', hash: '#home' }"
+              :active="currentRouteHash === '#home'"
+            >
               Home
             </NavLink>
 
+            <NavLink
+              :to="{ name: 'home', hash: '#about-me' }"
+              :active="currentRouteHash === '#about-me'"
+            >
+              About Me
+            </NavLink>
+            <NavLink
+              :to="{ name: 'home', hash: '#projects' }"
+              :active="currentRouteHash === '#projects'"
+            >
+              Projects
+            </NavLink>
+
             <NavLink to="about" :active="currentRouteName === 'about'">
-              About
+              About Me
             </NavLink>
           </div>
         </div>

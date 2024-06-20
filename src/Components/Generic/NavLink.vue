@@ -4,7 +4,7 @@ import { useColorSchemeStore } from "@/stores/colorScheme";
 import { useColorSchemes } from "@/Composables/useColorSchemes";
 
 const props = defineProps({
-  to: String,
+  to: Object | String,
   active: Boolean,
 });
 

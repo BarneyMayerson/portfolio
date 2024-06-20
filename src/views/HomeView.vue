@@ -48,6 +48,7 @@ watch(primaryColor, () => {
   </Transition>
 
   <div
+    id="home"
     class="bg-gray-100 dark:bg-gray-800 min-h-screen"
     :class="primaryColorClass"
   >
@@ -62,8 +63,15 @@ watch(primaryColor, () => {
         <p class="md:text-1xl sm:text-1xl">From Polotsk</p>
       </div>
     </div>
-    <div class="container mx-auto px-4 lg:px-8 pt-6">
-      <h1 class="text-3xl font-bold">Here is the Home page</h1>
+    <div id="about-me" class="container mx-auto px-4 lg:px-8 pt-[65px]">
+      <div class="h-[500px] border flex items-center justify-center">
+        <div>About me content goes here</div>
+      </div>
+    </div>
+    <div id="projects" class="container mx-auto px-4 lg:px-8 pt-[65px]">
+      <div class="h-[500px] border flex items-center justify-center">
+        <div>Projects content goes here</div>
+      </div>
     </div>
   </div>
 

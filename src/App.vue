@@ -5,12 +5,13 @@ import NavigationMenu from "@/Components/Generic/NavigationMenu.vue";
 
 const route = useRoute();
 const currentRouteName = computed(() => route.name);
+const currentRouteHash = computed(() => route.hash);
 </script>
 
 <template>
-  <header>
+  <header class="sticky top-0">
     <div class="antialiased font-sans">
-      <NavigationMenu :currentRouteName />
+      <NavigationMenu :currentRouteName :currentRouteHash />
     </div>
   </header>
 
