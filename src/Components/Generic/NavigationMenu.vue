@@ -44,10 +44,7 @@ const primaryColorClass = computed(
           </div>
           <!-- Navigation Links -->
           <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-            <NavLink
-              :to="{ name: 'home', hash: '#home' }"
-              :active="currentRouteHash === '#home'"
-            >
+            <NavLink :to="{ name: 'home' }" :active="!currentRouteHash">
               Home
             </NavLink>
 

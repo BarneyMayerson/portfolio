@@ -48,7 +48,6 @@ watch(primaryColor, () => {
   </Transition>
 
   <div
-    id="home"
     class="bg-gray-100 dark:bg-gray-800 min-h-screen"
     :class="primaryColorClass"
   >
