@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from "vue";
+import { computed } from "vue";
 import NavLink from "@/Components/Generic/NavLink.vue";
 import { useColorSchemeStore } from "@/stores/colorScheme";
 import { useColorSchemes } from "@/Composables/useColorSchemes";
@@ -18,7 +18,7 @@ const primaryColorClass = computed(
 
 <template>
   <nav
-    class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 z-10"
+    class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700"
   >
     <div class="container mx-auto px-4 lg:px-8">
       <div class="h-16 flex items-center justify-between">

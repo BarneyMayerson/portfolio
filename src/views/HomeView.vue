@@ -63,8 +63,60 @@ watch(primaryColor, () => {
       </div>
     </div>
     <div id="about-me" class="container mx-auto px-4 lg:px-8 pt-[65px]">
-      <div class="h-[500px] border flex items-center justify-center">
-        <div>About me content goes here</div>
+      <h2 class="font-bold leading-5 text-3xl text-center">About Me</h2>
+
+      <div class="flex flex-col space-y-4 items-center justify-center">
+        <div class="w-4/5 my-4 text-center text-xl">
+          <p>
+            Hello, my name is Ian and I am a web application amateur developer.
+            I take ready-made packages and well-known techniques and create
+            websites for my needs and the needs of the company where I work.
+            Very simple :)
+          </p>
+          <p class="mt-2">
+            My favorite developer stack includes Laravel, VueJS, TailwindCSS and
+            InertiaJS for SPA.
+          </p>
+        </div>
+        <div class="grid grid-flow-col gap-4">
+          <img
+            src="https://randomuser.me/api/portraits/men/26.jpg"
+            alt="photo"
+            class="w-44 object-cover rounded-lg transform hover:scale-110 duration-150"
+          />
+          <img
+            src="https://randomuser.me/api/portraits/men/27.jpg"
+            alt="photo"
+            class="w-44 object-cover rounded-lg transform hover:scale-110 duration-150"
+          />
+          <img
+            src="https://randomuser.me/api/portraits/men/28.jpg"
+            alt="photo"
+            class="w-44 object-cover rounded-lg transform hover:scale-110 duration-150"
+          />
+          <img
+            src="https://randomuser.me/api/portraits/men/29.jpg"
+            alt="photo"
+            class="w-44 object-cover rounded-lg transform hover:scale-110 duration-150"
+          />
+          <img
+            src="https://randomuser.me/api/portraits/men/30.jpg"
+            alt="photo"
+            class="w-44 object-cover rounded-lg transform hover:scale-110 duration-150"
+          />
+        </div>
+        <div class="w-4/5 my-8 text-center text-xl">
+          <p>
+            I was once a huge fan Need for Speen Underground. I was really sad
+            when EA closed the online service. Fortunately, there was a person
+            who created a server for the online game from scratch. By chance I
+            came across the source code of this server. The server allowed you
+            to play online, but unfortunately did not keep statistics. Then I
+            got the idea to improve the server for maintaining statistics. When
+            I did this I wanted to create a website for online tournaments. This
+            is what finally brought me into web development.
+          </p>
+        </div>
       </div>
     </div>
     <div id="projects" class="container mx-auto px-4 lg:px-8 pt-[65px]">
