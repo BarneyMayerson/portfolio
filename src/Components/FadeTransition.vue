@@ -1,13 +1,6 @@
-<script setup>
-import { onMounted, ref } from "vue";
-
-const show = ref(false);
-
-onMounted(() => (show.value = true));
-</script>
 <template>
   <Transition name="fade">
-    <slot v-if="show"></slot>
+    <slot></slot>
   </Transition>
 </template>
 
@@ -19,6 +12,6 @@ onMounted(() => (show.value = true));
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 5s ease;
+  transition: opacity 3s ease;
 }
 </style>

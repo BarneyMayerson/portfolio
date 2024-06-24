@@ -7,6 +7,7 @@ import { useThemes } from "@/Composables/useThemes";
 import { useColorSchemeStore } from "@/stores/colorScheme";
 import { useColorSchemes } from "@/Composables/useColorSchemes";
 import LinkParticles from "@/Components/Generic/LinkParticles.vue";
+import FadeImg from "@/Components/FadeImg.vue";
 
 const { theme } = useThemes(); // needs to init the theme was saved in the local storage
 
@@ -29,6 +30,23 @@ const primaryColorClass = computed(
 const primaryColor = computed(
   () => colors[colorScheme.primaryColor][colorScheme.primaryShade]
 );
+
+const images = ["26", "27", "28", "29", "30"];
+let index = 0;
+const currentImage = ref(images[index]);
+
+const imgUrl = computed(() => `/${currentImage.value}.jpg`);
+
+const change = () => {
+  index = index < images.length - 1 ? ++index : 0;
+
+  currentImage.value = images[index];
+};
+
+const imageKey = ref(0);
+watch(currentImage, () => {
+  imageKey.value++;
+});
 
 // track the primaryColor
 const renderKey = ref(0);
@@ -64,49 +82,26 @@ watch(primaryColor, () => {
     </div>
     <div id="about-me" class="container mx-auto px-4 lg:px-8 pt-[65px]">
       <h2 class="font-bold leading-5 text-3xl text-center">About Me</h2>
-
-      <div class="flex flex-col space-y-4 items-center justify-center">
+      <div class="flex flex-col space-y-6 items-center justify-center">
         <div class="w-4/5 my-4 text-center text-xl">
           <p>
-            Hello, my name is Ian and I am a web application amateur developer.
-            I take ready-made packages and well-known techniques and create
-            websites for my needs and the needs of the company where I work. It
-            seems very simple :)
+            Hello, my name is Ian and I am a web app amateur developer. I take
+            ready-made packages and well-known techniques and create websites
+            for my needs and the needs of the company where I work. It seems
+            very simple :). But it is not so.
           </p>
           <p class="mt-2">
             My favorite developer stack includes Laravel, VueJS, TailwindCSS and
             InertiaJS for SPA.
           </p>
         </div>
-        <div class="grid grid-flow-col gap-4">
-          <img
-            src="https://randomuser.me/api/portraits/men/26.jpg"
-            alt="photo"
-            class="w-44 object-cover rounded-lg transform hover:scale-110 duration-150"
-          />
-          <img
-            src="https://randomuser.me/api/portraits/men/27.jpg"
-            alt="photo"
-            class="w-44 object-cover rounded-lg transform hover:scale-110 duration-150"
-          />
-          <img
-            src="https://randomuser.me/api/portraits/men/28.jpg"
-            alt="photo"
-            class="w-44 object-cover rounded-lg transform hover:scale-110 duration-150"
-          />
-          <img
-            src="https://randomuser.me/api/portraits/men/29.jpg"
-            alt="photo"
-            class="w-44 object-cover rounded-lg transform hover:scale-110 duration-150"
-          />
-          <img
-            src="https://randomuser.me/api/portraits/men/30.jpg"
-            alt="photo"
-            class="w-44 object-cover rounded-lg transform hover:scale-110 duration-150"
-          />
+        <div class="flex justify-center">
+          <div class="w-64">
+            <FadeImg :imgUrl :key="imageKey" @click="change" />
+          </div>
         </div>
         <div class="w-4/5 my-8 text-center text-xl">
-          <p>
+          <p class="mt-4">
             I was once a huge Need for Speen Underground (2003) fan. I was
             really sad when EA closed the online service. Fortunately, there was
             a person who created a server for the online game from scratch. By
@@ -114,7 +109,7 @@ watch(primaryColor, () => {
             allowed you to play online, but unfortunately did not keep
             statistics. Then I got the idea to improve the server for
             maintaining statistics. When I did this I wanted to create a website
-            for online tournaments. This is what finally brought me into web
+            for online tournaments. This is what finally brought me into web app
             development.
           </p>
         </div>
