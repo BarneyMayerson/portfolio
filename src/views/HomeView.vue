@@ -70,8 +70,8 @@ watch(primaryColor, () => {
           <p>
             Hello, my name is Ian and I am a web application amateur developer.
             I take ready-made packages and well-known techniques and create
-            websites for my needs and the needs of the company where I work.
-            Very simple :)
+            websites for my needs and the needs of the company where I work. It
+            seems very simple :)
           </p>
           <p class="mt-2">
             My favorite developer stack includes Laravel, VueJS, TailwindCSS and
@@ -107,14 +107,15 @@ watch(primaryColor, () => {
         </div>
         <div class="w-4/5 my-8 text-center text-xl">
           <p>
-            I was once a huge fan Need for Speen Underground. I was really sad
-            when EA closed the online service. Fortunately, there was a person
-            who created a server for the online game from scratch. By chance I
-            came across the source code of this server. The server allowed you
-            to play online, but unfortunately did not keep statistics. Then I
-            got the idea to improve the server for maintaining statistics. When
-            I did this I wanted to create a website for online tournaments. This
-            is what finally brought me into web development.
+            I was once a huge Need for Speen Underground (2003) fan. I was
+            really sad when EA closed the online service. Fortunately, there was
+            a person who created a server for the online game from scratch. By
+            chance I came across the source code of this server. The&nbsp;server
+            allowed you to play online, but unfortunately did not keep
+            statistics. Then I got the idea to improve the server for
+            maintaining statistics. When I did this I wanted to create a website
+            for online tournaments. This is what finally brought me into web
+            development.
           </p>
         </div>
       </div>
@@ -135,16 +136,13 @@ watch(primaryColor, () => {
 </template>
 
 <style scoped>
-.slide-enter-from {
+.slide-enter-from,
+.slide-leave-to {
   transform: translateX(-100%);
 }
 
 .slide-enter-active,
 .slide-leave-active {
   transition: all 0.3s ease-out;
-}
-
-.slide-leave-to {
-  transform: translateX(-100%);
 }
 </style>

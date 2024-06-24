@@ -61,7 +61,7 @@ const primaryColorClass = computed(
               Projects
             </NavLink>
 
-            <NavLink to="about" :active="currentRouteName === 'about'">
+            <NavLink to="about-me" :active="currentRouteName === 'about'">
               About Me
             </NavLink>
           </div>
