@@ -130,7 +130,7 @@ watch(primaryColor, () => {
           <img src="/pvl.png" class="w-full" />
           <div class="mt-3">
             <a
-              href="https://github.com/BarneyMayerson"
+              href="https://github.com/BarneyMayerson/pvlh"
               class="underline font-bold block"
             >
               Locomotive planning
@@ -156,7 +156,7 @@ watch(primaryColor, () => {
           <img src="/dpv.png" class="w-full" />
           <div class="mt-3">
             <a
-              href="https://github.com/BarneyMayerson"
+              href="https://github.com/BarneyMayerson/dpv"
               class="underline font-bold block"
             >
               Delayed Wagons
@@ -188,7 +188,7 @@ watch(primaryColor, () => {
           <img src="/nfsu.png" class="w-full" />
           <div class="mt-3">
             <a
-              href="https://github.com/BarneyMayerson"
+              href="https://github.com/BarneyMayerson/nfsu2"
               class="underline font-bold block"
             >
               NFSU Cup
