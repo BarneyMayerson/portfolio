@@ -1,5 +1,6 @@
 <script setup>
 import NavLink from "@/Components/Generic/NavLink.vue";
+import ActiveAnchor from "@/Components/Generic/ActiveAnchor.vue";
 
 defineProps({
   currentRouteHash: String,
@@ -13,7 +14,7 @@ defineProps({
     <div class="container mx-auto px-4 lg:px-8">
       <div class="h-16 flex items-center justify-between">
         <div class="flex items-center">
-          <a href="/">
+          <ActiveAnchor href="/">
             <div class="flex items-center space-x-3">
               <img
                 src="https://avatars.githubusercontent.com/u/120561976?v=4"
@@ -25,7 +26,7 @@ defineProps({
                 Barney Mayerson
               </span>
             </div>
-          </a>
+          </ActiveAnchor>
           <!-- Navigation Links -->
           <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
             <NavLink

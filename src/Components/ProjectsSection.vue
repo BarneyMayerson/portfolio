@@ -5,6 +5,7 @@ import BootstrapLogo from "@/Components/Logos/BootstrapLogo.vue";
 import ChartLogo from "@/Components/Logos/ChartLogo.vue";
 import LivewireLogo from "@/Components/Logos/LivewireLogo.vue";
 import TailwindLogo from "@/Components/Logos/TailwindLogo.vue";
+import ActiveAnchor from "@/Components/Generic/ActiveAnchor.vue";
 </script>
 
 <template>
@@ -15,12 +16,9 @@ import TailwindLogo from "@/Components/Logos/TailwindLogo.vue";
     <div class="p-4 shadow-lg rounded-md bg-gray-200 dark:bg-gray-700">
       <img src="/pvl.png" class="w-full" />
       <div class="mt-3">
-        <a
-          href="https://github.com/BarneyMayerson/pvlh"
-          class="underline font-bold block"
-        >
+        <ActiveAnchor href="https://github.com/BarneyMayerson/pvlh">
           Locomotive planning
-        </a>
+        </ActiveAnchor>
         <div class="mt-4 flex items-center space-x-1">
           <div class="w-6 h-6">
             <LaravelLogo />
@@ -41,12 +39,9 @@ import TailwindLogo from "@/Components/Logos/TailwindLogo.vue";
     <div class="p-4 shadow-lg rounded-md bg-gray-200 dark:bg-gray-700">
       <img src="/dpv.png" class="w-full" />
       <div class="mt-3">
-        <a
-          href="https://github.com/BarneyMayerson/dpv"
-          class="underline font-bold block"
-        >
+        <ActiveAnchor href="https://github.com/BarneyMayerson/dpv">
           Delayed Wagons
-        </a>
+        </ActiveAnchor>
         <div class="mt-4 flex items-center space-x-1">
           <div class="w-6 h-6">
             <LaravelLogo />
@@ -73,12 +68,9 @@ import TailwindLogo from "@/Components/Logos/TailwindLogo.vue";
     >
       <img src="/nfsu.png" class="w-full" />
       <div class="mt-3">
-        <a
-          href="https://github.com/BarneyMayerson/nfsu2"
-          class="underline font-bold block"
-        >
+        <ActiveAnchor href="https://github.com/BarneyMayerson/nfsu2">
           NFSU Cup
-        </a>
+        </ActiveAnchor>
         <div class="mt-4 flex items-center space-x-1">
           <div class="w-6 h-6">
             <LaravelLogo />
