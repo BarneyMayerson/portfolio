@@ -3,7 +3,7 @@ import { computed, ref, watch } from "vue";
 import FadeImg from "@/Components/FadeImg.vue";
 
 const images = ["26", "27", "28", "29", "30"];
-let index = 0;
+let index = Math.floor(Math.random() * 5);
 const currentImage = ref(images[index]);
 
 const imgUrl = computed(() => `/${currentImage.value}.jpg`);
