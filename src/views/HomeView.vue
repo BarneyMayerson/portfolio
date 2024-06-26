@@ -9,6 +9,9 @@ import { useColorSchemes } from "@/Composables/useColorSchemes";
 import LinkParticles from "@/Components/Generic/LinkParticles.vue";
 import AboutMeSection from "@/Components/AboutMeSection.vue";
 import ProjectsSection from "@/Components/ProjectsSection.vue";
+import LinkedinLogo from "@/Components/Logos/LinkedinLogo.vue";
+import GithubLogo from "@/Components/Logos/GithubLogo.vue";
+import ActiveAnchor from "@/Components/Generic/ActiveAnchor.vue";
 
 const { theme } = useThemes(); // needs to init the theme was saved in the local storage
 
@@ -62,6 +65,14 @@ watch(primaryColor, () => {
         <h1 class="text-2xl sm:text-3xl md:text-4xl">Barney Mayerson</h1>
         <h2 class="sm:text-1xl text-lg md:text-2xl">Web App Developer</h2>
         <p class="md:text-1xl sm:text-1xl">From Polotsk</p>
+        <div class="mt-4 flex justify-center space-x-4">
+          <ActiveAnchor href="https://github.com/BarneyMayerson">
+            <LinkedinLogo class="w-16 h-16" />
+          </ActiveAnchor>
+          <ActiveAnchor href="https://github.com/BarneyMayerson">
+            <GithubLogo class="w-16 h-16" />
+          </ActiveAnchor>
+        </div>
       </div>
     </div>
     <div id="about-me" class="container mx-auto px-4 lg:px-8 pt-16">
