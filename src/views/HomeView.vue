@@ -66,7 +66,9 @@ watch(primaryColor, () => {
         <h2 class="sm:text-1xl text-lg md:text-2xl">Web App Developer</h2>
         <p class="md:text-1xl sm:text-1xl">From Polotsk</p>
         <div class="mt-4 flex justify-center space-x-4">
-          <ActiveAnchor href="https://github.com/BarneyMayerson">
+          <ActiveAnchor
+            href="https://www.linkedin.com/in/ivan-vassiliev-4b978051/"
+          >
             <LinkedinLogo class="w-16 h-16" />
           </ActiveAnchor>
           <ActiveAnchor href="https://github.com/BarneyMayerson">

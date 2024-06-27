@@ -54,7 +54,7 @@ import ActiveAnchor from "@/Components/Generic/ActiveAnchor.vue";
           <div class="w-6 h-6">
             <BootstrapLogo />
           </div>
-          <span class="text-xs">Bootstrap 2</span>
+          <span class="text-xs">Bootstrap 4</span>
           <div class="w-6 h-6">
             <ChartLogo />
           </div>
